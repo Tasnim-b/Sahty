@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1 , shrink-to-fit=no"/>
+        <link rel="stylesheet" href="/css/acceuil.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/fontawesome.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <title>Acceuil</title>
+
+    </head>
+    <body>
+                 <!-- start upper bar--> 
+     <div class="upper_bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md" >				<!-- col-sm=small / -md= medium  / -lg=large  "without the id"-->
+                </div> 
+                <div class="col-md" >				 
+                </div>
+                <div class="col-md" >				
+                </div> 
+            </div>
+            <div class="logo"></div>
+        </div>
+    </div>
+  <!-- end upper bar -->
+        <!--start navbar-->
+  <nav class="navbar navbar-expand-lg" style="top: 25px;" >
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/index.html"><span>Acceuil</span><span class="sr-only">(current)</span></a>
+            </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/Explore.html"><span>Explore</span><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/news.html"><span>News</span><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/login-sahty.html"><span>Contact</span><span class="sr-only">(current)</span></a>
+        </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+  <!--end navbar-->
+<!-- start slide show  -->
+<div class="container-s">
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <img src="/img/p6.webp"  style="width: 100%; height: 499px;">
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/team1.webp"  style="width: 100%; height: 499px;">
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/p14.webp" style="width: 100%; height: 500px;">
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    
+  </div>
+</div>
+<!-- script slide show -->
+ <script>
+  const swiper = new Swiper('.swiper', {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction:false ,
+    },
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true ,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script> 
+<!-- end slide show -->
+<!-- start top trending topics -->
+<h4 style="color: 	#1E90FF;margin-left: 100px; top: -25px;"><strong>Trending Topics</strong></h4>
+<hr style="color: 	#B0C4DE; width: 1400px;margin-left: 80px;">
+<div class="top-topics">
+  <button ><a href="#">COVID Vaccine Booster</a></button>
+  <button><a href="#">Long COVID</a></button>
+  <button><a href="#">Throat Cancer </a></button>
+  <button><a href="#">Syphilis</a></button>
+  <button><a href="#">Melatonin</a></button>
+  <button><a href="#">Climate change</a></button>
+  <button><a href="#">Green spaces </a></button>
+  <button><a href="#">Strep A</a></button>
+  <button><a href="#">Hay Fever</a></button>
+  <button><a href="#">Hospice</a></button>
+</div>
+<!-- end top trending topics-->
+<!-- start Explore by  -->
+<h4 style="color: 	#1E90FF;margin-left: 100px; top: -25px;"><strong>Explore By</strong></h4>
+<hr style="color: 	#B0C4DE; width: 1400px;margin-left: 80px;">
+<div class="explore-by">
+      <div class="row">
+        <div class="column">
+          <img src="/img/nutrition.webp" style="width:50%;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"><br><br>
+          <strong align="centre" style="margin-left: 50px;"><a href="/html/nutrution.html">Nutrition</a></strong>
+        </div>
+        <div class="column">
+          <img src="/img/sleep.webp" style="width:50%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"><br><br>
+          <strong align="centre" style="margin-left: 50px;"><a href="">Sleep</a></strong>
+        </div>
+        <div class="column">
+          <img src="/img/mantel health.webp" style="width:50%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor"><br><br>
+          <strong align="centre" style="margin-left: 50px;"><a href="#">Mentel Health</a>  </strong>
+        </div>
+        <div class="column">
+          <img src="/img/Explore_By-Fitness.webp" style="width:50%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor"><br><br>
+          <strong align="centre" style="margin-left: 50px;"><a href="">Fitness</a></strong>
+
+        </div>
+      </div>
+
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="/img/nutrition.webp" style="width:50%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="/img/sleep.webp" style="width:50%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="/img/mantel health.webp" style="width:50%">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="/img/Explore_By-Fitness.webp" style="width:50%">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+         
+
+          <div class="column">
+            <img class="demo cursor" src="/img/nutrition.webp" style="width:50%" onclick="currentSlide(1)" >
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="/img/sleep.webp" style="width:50%" onclick="currentSlide(2)" >
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="/img/mantel health.webp" style="width:50%" onclick="currentSlide(3)" >
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="/img/Explore_By-Fitness.webp" style="width:50%" onclick="currentSlide(4)" >
+          </div>
+        </div>
+      </div>
+</div>
+<script>
+  function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<!-- end Explore by  -->
+<!-- start Health a-z -->
+<h4 style="color: 	#1E90FF;margin-left: 100px; top: -25px;"><strong>Health A-Z</strong></h4>
+<hr style="color: 	#B0C4DE; width: 1400px;margin-left: 80px;">
+<div style="margin-bottom: 100px;">
+<div class="healthA-Z">
+  <div>
+    <p><a href="#">ADD/ADHD-Childhood</a></p>
+  </div>
+  <div>
+    <p><a href="#">ADHD</a></p>
+  </div>
+  <div>
+    <p><a href="#">Allergies</a></p>
+  </div>
+  <div>
+    <p><a href="#">Alzheimer's</a></p>
+  </div>
+</div>
+<div class="healthA-Z">
+  <div>
+    <p><a href="#">Anxiety Disorders</a></p>
+  </div>
+  <div>
+    <p><a href="#">Arthritis</a></p>
+  </div>
+  <div>
+    <p><a href="#">Asthma</a></p>
+  </div>
+  <div>
+    <p><a href="#">Back Pain</a></p>
+  </div>
+</div>
+<div class="healthA-Z">
+  <div>
+    <p><a href="#">Cancer</a></p>
+  </div>
+  <div>
+    <p><a href="#">Children's Vaccines</a></p>
+  </div>
+  <div>
+    <p><a href="#">Cholesterol</a></p>
+  </div>
+  <div>
+    <p><a href="#">Cold, Flu, & Cough</a></p>
+  </div>
+</div>
+<div class="healthA-Z">
+  <div>
+    <p><a href="#">COPD</a></p>
+  </div>
+  <div>
+    <p><a href="#">Coronavirus</a></p>
+  </div>
+  <div>
+    <p><a href="#">Depression</a></p>
+  </div>
+  <div>
+    <p><a href="#">Diabetes</a></p>
+  </div>
+</div>
+<div class="healthA-Z">
+  <div>
+    <p><a href="#">Digetive Disorders</a></p>
+  </div>
+  <div>
+    <p><a href="#">Eye Health</a></p>
+  </div>
+  <div>
+    <p><a href="#">Health & Balance</a></p>
+  </div>
+  <div>
+    <p><a href="#">Heart Health</a></p>
+  </div>
+</div>
+<div class="healthA-Z">
+  <div>
+    <p><a href="#">Hypertension</a></p>
+  </div>
+  <div>
+    <p><a href="#">Multiple Myeloma</a></p>
+  </div>
+  <div>
+    <p><a href="#">Migraines</a></p>
+  </div>
+  <div>
+    <p><a href="#">Multiple Sclerosis</a></p>
+  </div>
+</div>
+<div class="healthA-Z">
+  <div>
+    <p><a href="#">Oral Care</a></p>
+  </div>
+  <div>
+    <p><a href="#">Orthopedics</a></p>
+  </div>
+  <div>
+    <p><a href="#">Osteoporosis</a></p>
+  </div>
+  <div>
+    <p><a href="#">Ovarian Cancer</a></p>
+  </div>
+</div>
+<div class="healthA-Z">
+  <div>
+    <p><a href="#">Prostate Cancer</a></p>
+  </div>
+  <div>
+    <p><a href="#">Psoriasis</a></p>
+  </div>
+  <div>
+    <p><a href="#">Rheumatoid Arthritis</a></p>
+  </div>
+  <div>
+    <p><a href="#">Schizophrenia</a></p>
+  </div>
+</div>
+<div class="healthA-Z">
+  <div>
+    <p><a href="#">Sexual Conditions</a></p>
+  </div>
+  <div>
+    <p><a href="#">Skin Problems</a></p>
+  </div>
+  <div>
+    <p><a href="#"> Sacrum Anterior Abnormality</a></p>
+  </div>
+  <div>
+    <p><a href="#">SAPHO Syndrome</a></p>
+  </div>
+</div>
+</div>
+<!-- end health A-z -->
+<!-- start about us -->
+<h4 style="color: 	#1E90FF;margin-left: 100px; top: -25px;"><strong>Science And Integrity Matter To Us</strong></h4>
+<hr style="color: 	#B0C4DE; width: 1400px;margin-left: 80px;">
+<div class="about-us">
+  <div class="container-us">
+    <img src="/img/reaserch.png" alt="Notebook" style="width:100%;">
+    <div class="content">
+     <strong> <p>At Sahty, we set high standards of quality, research, and transparency for what we share, ensuring you have access to nothing but the best. Here's how:</p></strong>
+      <ul>
+       <strong> <em><span>	&#8226;</span> To ensure accuracy, each of our 20,000+ articles is reviewed by a medical subject matter expert such as a doctor, nurse, or therapist.</em><br>
+        <em><span>	&#8226;</span> Our recommendations are current and based on research thanks to our diligent health and medical monitoring standards.</em><br>
+        <em><span>	&#8226;</span> Featured brands are reviewed for medical credibility, business practices, and social impact.</em></strong>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end about us -->
+<!-- start team docotors representation -->
+<h4 style="color: 	#1E90FF;margin-left: 100px; top: -25px;"><strong>Our Team Doctors </strong></h4>
+<hr style="color: 	#B0C4DE; width: 1400px;margin-left: 80px;">
+<div class="team-doctor">
+  <div class="container-team">
+    <img src="/img/doceur5.jpg" alt="Avatar" class="image">
+    <div class="overlay"> Dr Taher Jmal and i'm a Pediatrician</div>
+  </div>
+  <div class="container-team">
+    <img src="/img/docteur3.jpg" alt="Avatar" class="image">
+    <div class="overlay">Dr Hajer Barbouchi and i'm a Geriatrician</div>
+  </div>
+  <div class="container-team">
+    <img src="/img/docteur1.jpg" alt="Avatar" class="image">
+    <div class="overlay">Dr Med Chaaben and i'm a Neurologist</div>
+  </div>
+  <div class="container-team">
+    <img src="/img/docteur4.jpg" alt="Avatar" class="image">
+    <div class="overlay">Dr Leila Nouri and i'm a dentist</div>
+  </div>
+  <div class="container-team">
+    <img src="/img/docteur6.jpg" alt="Avatar" class="image">
+    <div class="overlay">Dr Med Chatar and i'm a Nutritionist</div>
+  </div>
+  <div class="container-team">
+    <img src="/img/docteur2.jpg" alt="Avatar" class="image">
+    <div class="overlay">Dr Kamel Mili and i'm a cardiologist</div>
+  </div>
+</div>
+<!-- end team docotors representation -->
+<!-- start tools -->
+<h4 style="color: 	#1E90FF;margin-left: 100px; top: -25px;"><strong>Tools , Trackes & calculators </strong></h4>
+<hr style="color: 	#B0C4DE; width: 1400px;margin-left: 80px;">
+<div class="tools">
+  <div>
+    <img src="/img/bmi-calculator2.webp"  style="width: 189px;height:170px;"><br><br>
+    <strong><a href="/BMI-calculator.html"  style="margin-left: 50px;">BMI calculator</a></strong>
+
+  </div>
+  <div>
+    <img src="/img/ovulation-calculator2.webp"  style="width: 189px;height:170px;"><br><br>
+    <strong><a href="/ovulation.html"  style="margin-left: 25px;">Ovulation calculator</a></strong>
+  </div>
+  <div>
+    <img src="/img/pregnancy-calendar2.webp"  style="width: 189px;height:170px;"><br><br>
+    <strong><a href="#"  style="margin-left: 30px;">Pregnancy calendar</a></strong>
+  </div>
+
+  <div>
+    <img src="/img/pill-identifier2.webp" style="width: 189px;height:170px;"><br><br>
+    <strong><a href="/pill.html" style="margin-left: 50px;">Pill identifier</a></strong>
+  </div>
+  <div>
+    <img src="/img/drugs-interaction-checker2.webp"  style="width: 189px;height:170px;"><br><br>
+    <strong><a href="/drugs.html" style="margin-right: 20px;">Drugs interaction checker</a></strong>
+  </div>
+</div>
+<!-- end tools -->
+<!--start footer-->
+<footer>
+  <div class="container-f">
+      <div class="partie-1">
+         <img src="/img/SAHTY.png" >      
+       </div>
+      <div >
+        <h5 style="color: #1E90FF;">Navigation</h5>
+        <ul class="list-unstyled" style="margin-left: 8px;">
+          <em><a href="/index.html" style="color: #808080;">Acceuil</a></em><br>
+          <em><a href="/Explore.html" style="color: #808080;">Explorer</a></em><br>
+          <em><a href="/news.html" style="color: #808080;">News</a></em><br>
+          <em><a href="/login-sahty.html" style="color: #808080;">Contact</a></em>
+        </ul>
+      </div>
+      <div style="margin-left:-50px ;">
+        <h5 style="color: #1E90FF;">Contact </h5>
+        <ul class="list-unstyled" style="margin-left: 8px;">
+            <li><a href="/login-sahty.html" style="color: #808080;">Login</a>
+            </li><br>
+            <li><a href="/sign-up.html" style="color: #808080;">Sign up</a>
+            </li>
+        </ul>
+      </div> 
+      <div class="news">
+        <h5 style="color: #1E90FF;" >News </h5>
+        <ul class="list-unstyled" style="margin-left: 8px;">
+          <li><a href="#" style="color: #808080;">
+            Health A-Z</a>
+          </li><br>
+          <li>
+              <a href="/nutrution.html" style="color: #808080">Nutrion</a>
+          </li>
+      </ul>
+       </div>
+      <div class="follow">
+          <h5 style="color: #1E90FF;" >Follow us </h5>
+          <ul class="list-unstyled" style="margin-left: 8px;">
+              <li><a href="#" style="color: #808080;">
+                  <i class="fab fa-facebook"   style="color: #1E90FF;"></i>Instagram</a>
+              </li><br>
+              <li>
+                  <a href="#" style="color: #808080"> <i class="fab fa-instagram" style="color: #1E90FF;" ></i>Facebook</a>
+              </li>
+          </ul>
+      </div>
+     
+ </div>
+</footer>
+<!--end footer-->
+
+
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ovulation Calculator</title>
+	<link rel="stylesheet" type="text/css" href="/css/ovulation.css">
+</head>
+<body>
+     <!-- end ovulation calculator -->
+    <img src="/img/ovulationcalc.jpeg.webp" style="width: 100%;">
+    <div class="content">
+        <div class="container-o">
+            <h1>Ovulation Calculator</h1>
+            <form>
+                <label for="cycle-length">Cycle Length (days):</label>
+                <input type="number" id="cycle-length" name="cycle-length" min="10" max="60" required>
+                <label for="last-period-date">Date of Last Period:</label>
+                <input type="date" id="last-period-date" name="last-period-date" required>
+                <input type="submit" value="Calculate">
+            </form>
+            <div class="result">
+                <p>Ovulation Date:</p>
+                <p id="ovulation-date"></p>
+            </div>
+        </div>
+
+    </div>
+
+  <script>
+    var form = document.querySelector("form");
+var ovulationDate = document.querySelector("#ovulation-date");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  var cycleLength = parseInt(document.querySelector("#cycle-length").value);
+  var lastPeriodDate = new Date(document.querySelector("#last-period-date").value);
+  
+  var ovulationDate = new Date(lastPeriodDate.getTime() + (cycleLength - 14) * 24 * 60 * 60 * 1000);
+  var ovulationDateString = ovulationDate.toLocaleDateString();
+  
+  document.querySelector("#ovulation-date").innerHTML = ovulationDateString;
+});
+
+  </script>
+  <!-- end ovulation calculator -->
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pill Identifier</title>
+	<link rel="stylesheet" type="text/css" href="/css/pill.css">
+</head>
+<body>
+    <!-- start pill identifier -->
+    <img src="/img/pill.jpg" style="width: 100%;">
+    <div class="content">
+        <div class="container-p">
+            <h1>Pill Identifier</h1>
+            <form>
+                <label for="pill-description">Pill Description:</label>
+                <input type="text" id="pill-description" name="pill-description" required>
+                <input type="submit" value="Identify">
+            </form>
+            <div class="result">
+                <p>Pill Color:</p>
+                <p id="pill-color"></p>
+                <p>Pill Shape:</p>
+                <p id="pill-shape"></p>
+                <p>Other Identifying Features:</p>
+                <p id="pill-features"></p>
+            </div>
+        </div>
+    </div>
+  <script>
+    var form = document.querySelector("form");
+var pillColor = document.querySelector("#pill-color");
+var pillShape = document.querySelector("#pill-shape");
+var pillFeatures = document.querySelector("#pill-features");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  var pillDescription = document.querySelector("#pill-description").value.toLowerCase();
+  
+  if (pillDescription.includes("red")) {
+    pillColor.innerHTML = "Red";
+  } else if (pillDescription.includes("blue")) {
+    pillColor.innerHTML = "Blue";
+  } else if (pillDescription.includes("yellow")) {
+    pillColor.innerHTML = "Yellow";
+  } else {
+    pillColor.innerHTML = "Unknown";
+  }
+  
+  if (pillDescription.includes("round")) {
+    pillShape.innerHTML = "Round";
+  } else if (pillDescription.includes("oval")) {
+    pillShape.innerHTML = "Oval";
+  } else if (pillDescription.includes("square")) {
+    pillShape.innerHTML = "Square";
+  } else {
+    pillShape.innerHTML = "Unknown";
+  }
+  
+  if (pillDescription.includes("imprint")) {
+    var features = pillDescription.substring(pillDescription.indexOf("imprint") + 7);
+    pillFeatures.innerHTML = features;
+  } else {
+    pillFeatures.innerHTML = "None";
+  }
+});  
+</script>
+  <!-- end pill identifier -->
+</body>
+</html>

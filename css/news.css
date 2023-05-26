@@ -1,0 +1,117 @@
+
+  /* hover #ADD8E6 */
+ /* start upper bar */
+ .upper_bar {
+    top: 20px;
+    background-color:#000000 ;
+    }
+    ul.lang-navbar{ 
+    float:center;
+    list-style:none;
+    margin:0;
+    position:0;
+    }
+     li{
+     display:inline !important ;
+     padding:5px ;
+    }
+                             
+    .lang-navbar span {
+      color:black;
+    }
+    
+    /* end upper bar */
+    /* start navbar */
+        
+    .navbar {
+        position: flex;
+        height: 48px;
+        width: 810px;
+        left: 311px;
+    
+        }
+        .navbar-brand span {
+            color:black;
+            font-size:13px;
+            font-weight:bold;
+        }
+        .nav-link span {
+        color: black;
+      top: 8px;
+        font-size: 17px;
+        font-weight: 500
+        }
+        .nav-link h3 {
+            color: #f7b72a;
+            font-size: 14px;
+            font-weight: 500
+        }
+        .contact{
+            display: block;
+        }
+        button{
+            border: none;
+            border-radius: 0%;
+            background-color: #fff;
+            
+        }
+        .logo{
+    
+            position: absolute;
+            height: 150px;
+            width: 250px;
+        padding: 10px;
+            top: -20px;
+            left: 16px; 
+            background-image: url('../img/SAHTY.png');
+            display: block;
+            float: left;
+            max-width: 100%;
+            background-size: 249px;
+            background-repeat: no-repeat;
+        }
+      .dropdown-item .navbarDropdown{
+    color: #000000;  }
+        
+    /* end navbar */
+    /* start news */
+    .news-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        column-gap: 15px;
+        margin-left: 100px;
+        margin-top: 150px;
+    }
+   .news p a :hover   {
+    color:#ADD8E6;
+    }
+    .news{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        column-gap: 15px;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+    /* end news */
+/*start footer*/
+.container-f{
+    margin-top: 200px;
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
+  .fab{
+    margin-right: 7px;
+  }
+  .partie-1{
+  margin-top: -120px;
+  margin-left: 8px;}
+  .news-2 {
+    margin-left: -65px;
+  }
+  .follow{
+    margin-right: 100px;
+  }
+   
+  /*end footer */

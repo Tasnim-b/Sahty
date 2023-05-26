@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drug Interaction Checker</title>
+	<link rel="stylesheet" type="text/css" href="/css/drugs.css">
+</head>
+<body>
+    <img src="/img/drugf.jpg" style="width: 100%;">
+    <div class="content">
+        <div class="container">
+            <h1>Drug Interaction Checker</h1>
+            <form>
+                <label for="drug1">Drug 1:</label>
+                <input type="text" id="drug1" name="drug1" required>
+                <label for="drug2">Drug 2:</label>
+                <input type="text" id="drug2" name="drug2" required>
+                <input type="submit" value="Check Interactions">
+            </form>
+            <div class="result">
+                <p id="interaction-result"></p>
+            </div>
+        </div>
+    </div>
+	
+
+	<script >
+    var form = document.querySelector("form");
+var interactionResult = document.querySelector("#interaction-result");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  var drug1 = document.querySelector("#drug1").value.toLowerCase();
+  var drug2 = document.querySelector("#drug2").value.toLowerCase();
+  
+  if (checkInteraction(drug1, drug2)) {
+    interactionResult.innerHTML = "These drugs may interact with each other.";
+  } else {
+    interactionResult.innerHTML = "These drugs are unlikely to interact with each other.";
+  }
+});
+
+function checkInteraction(drug1, drug2) {
+  // Define the drugs and their interactions in an object
+  var drugInteractions = {
+    "aspirin": ["ibuprofen", "naproxen"],
+    "ibuprofen": ["aspirin", "naproxen"],
+    "naproxen": ["aspirin", "ibuprofen"],
+    "acetaminophen": [],
+    "warfarin": ["aspirin"],
+    "amoxicillin": [],
+    "doxycycline": [],
+    "ciprofloxacin": [],
+    "fluconazole": ["warfarin"],
+    "simvastatin": ["amiodarone"]
+  };
+  
+  // Check if the drugs are listed in the object and have interactions
+  if (drugInteractions.hasOwnProperty(drug1) && drugInteractions[drug1].includes(drug2)) {
+    return true;
+  } else if (drugInteractions.hasOwnProperty(drug2) && drugInteractions[drug2].includes(drug1)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+  </script>
+</body>
+</html>
+
